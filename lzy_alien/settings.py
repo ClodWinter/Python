@@ -8,10 +8,12 @@ class Settings():
 		self.ship_speed = 5
 
 		self.bulletspeed = 5
-		self.bulletwidth = 3
+		self.bulletwidth = 300
 		self.bulletheight = 15
 		self.bulletcolor = 3,60,60
 		self.bulletcount = 3
 		self.alien_down_speed = 10
 		self.alien_direction = 1
 		self.alien_speed = 1
+
+		self.ship_limit = 3
