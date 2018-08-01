@@ -63,7 +63,9 @@ def check_events(settings,screen,ship,aliens,bullets,playbutton,stats,sb):
 
 def update_screen(settings,stats,screen,ship,bullets,aliens,playbutton,sb):
 
-	screen.fill(settings.bg_color)
+	# screen.fill(settings.bg_color)
+
+	create_game_bg(screen)
 
 	for bullet in bullets.sprites():
 		bullet.drawbullet()
@@ -187,3 +189,14 @@ def check_high_score(stats,sb):
 	if stats.score > stats.high_score:
 		stats.high_score = stats.score
 		sb.prep_score_high()
+
+def create_game_bg(screen):
+	bg = pygame.image.load("images/game_bg.jpeg")
+	rect = bg.get_rect()
+	rect.x = 0
+	rect.y = 0
+	rect.width = 800
+	rect.height = 600
+	screen.blit(bg,rect)
+
+
