@@ -1,6 +1,7 @@
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
 	"""docstring for ClassName"""
 	def __init__(self, screen,settings):
 		super(Ship, self).__init__()
